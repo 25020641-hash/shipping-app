@@ -1,0 +1,40 @@
+﻿name: Java CI Build All Labs
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Build and Test Bai1
+      run: mvn clean test
+      working-directory: ./Bai1
+      continue-on-error: true
+
+    - name: Build and Test Bai2
+      run: mvn clean test
+      working-directory: ./Bai2
+      continue-on-error: true
+
+    - name: Build and Test Bai3
+      run: mvn clean package
+      working-directory: ./Bai3
+
+    - name: Build and Test Bai4
+      run: mvn clean test
+      working-directory: ./Bai4
+      continue-on-error: true
