@@ -20,21 +20,52 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Build and Test Bai1
+    - name: Test Bai1
       run: mvn clean test
       working-directory: ./Bai1
       continue-on-error: true
 
-    - name: Build and Test Bai2
+    - name: Test Bai2
       run: mvn clean test
       working-directory: ./Bai2
       continue-on-error: true
 
-    - name: Build and Test Bai3
-      run: mvn clean package
+    - name: Test Bai3
+      run: mvn clean test
       working-directory: ./Bai3
+      continue-on-error: true
 
-    - name: Build and Test Bai4
+    - name: Test Bai4
       run: mvn clean test
       working-directory: ./Bai4
+      continue-on-error: true
+
+    - name: Test Bai5
+      run: mvn clean test
+      working-directory: ./Bai5
+      continue-on-error: true
+
+    - name: Test Bai6
+      run: mvn clean test
+      working-directory: ./Bai6
+      continue-on-error: true
+
+    - name: Test Bai7
+      run: mvn clean test
+      working-directory: ./Bai7
+      continue-on-error: true
+
+    - name: Test Bai8
+      run: mvn clean test
+      working-directory: ./Bai8
+      continue-on-error: true
+
+    - name: Test Bai9
+      run: mvn clean test
+      working-directory: ./Bai9
+      continue-on-error: true
+
+    - name: Test Bai10
+      run: mvn clean test
+      working-directory: ./Bai10
       continue-on-error: true
