@@ -2,7 +2,8 @@ package com.lab;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ShippingCalculator {
+public class
+ShippingCalculator {
     private static final Logger logger = LoggerFactory.getLogger(ShippingCalculator.class);
 
     public double calculate(double weight, String type) {
